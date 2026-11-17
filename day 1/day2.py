@@ -101,16 +101,43 @@
 # s1.car()
 # s1.land()
 ###############polymorphism##################
-class actual:
-    def sound(self):
-        print("animal has a sound")
-class dog(actual):
-    def sound(self):
-        print("dog barks")
-class cat(actual):
-    def sound(self):
-        print('cat meow')
+# class actual:
+#     def sound(self):
+#         print("animal has a sound")
+# class dog(actual):
+#     def sound(self):
+#         print("dog barks")
+# class cat(actual):
+#     def sound(self):
+#         print('cat meow')
 
-animal = [dog(), cat(), actual()]
-for animals in animal:
-    animals.sound()
+# animal = [dog(), cat(), actual()]
+# for animals in animal:
+#     animals.sound()
+
+#################abstraction##########################
+
+from abc import ABC, abstractmethod
+
+class payment(ABC):
+    @abstractmethod
+    def pay(self):
+        pass
+
+
+class upi(payment):
+    def pay(self):
+        print("payment done in upi")
+
+
+class card(payment):
+    def pay(self):
+        print("payment using card")
+
+
+# Creating objects
+p1 = upi()
+p2 = card()
+
+p1.pay()
+p2.pay()
