@@ -126,18 +126,18 @@ class payment(ABC):
 
 
 class upi(payment):
-    def pay(self):
-        print("payment done in upi")
+    def pay(self,amount):
+        print(f"payment done in upi: rs.{amount}")
 
 
 class card(payment):
-    def pay(self):
-        print("payment using card")
+    def pay(self,amount):
+        print(f"payment using card: rs.{amount}")
 
 
 # Creating objects
 p1 = upi()
 p2 = card()
 
-p1.pay()
-p2.pay()
+p1.pay(100)
+p2.pay(1000)
