@@ -1,0 +1,13 @@
+table
+        {
+            border-collapse: collapse;
+            margin: 0% auto;
+            padding: 20px;
+            width: 800px;
+            height: 300px;
+            border: 1px solid green;
+        }
+        th,td{
+            background-color: gold;
+            text-align: center;
+        }
